@@ -3,6 +3,10 @@ import Navigation from './components/Navigation'
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
+import About from './pages/About'
+import Contact from './pages/Contact'// 
+import Projects from './pages/Projects'
+import ProjectDetail from './pages/ProjectDetail'
 
 const App = () => {
   return (
@@ -11,9 +15,10 @@ const App = () => {
 
     <Routes>
       <Route path='/' element={<Home/>} />
-      <Route path='/about' element={<h1>About</h1>} />
-      <Route path='/contact' element={<h1>Contact</h1>} />
-      <Route path='/projects' element={<h1>Projects</h1>} />
+      <Route path='/about' element={<About />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/projects' element={<Projects />} />
+      <Route path="/projects/:id" element={<ProjectDetail />} />
       <Route path='*' element={<NotFound/>} />
     </Routes>
     </>
